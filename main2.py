@@ -1,16 +1,12 @@
-numbers=[34,78,56,62,12]
-
-largest = numbers[0]
-second_largest = numbers[0]
-
-for num in numbers:
-
-    if num > largest:
-        second_largest = largest
-        largest = num
-
-    elif num > second_largest and num != largest:
-        second_largest = num
-
-print("Second Largest:", second_largest)
-
+class Employee:
+    def __init__(self, name, department, salary):
+        self.name = name
+        self.department = department
+        self.salary = salary
+    def get_info(self):
+        return f"Name: {self.name}, Department: {self.department}, Salary: ₹{self.salary}"
+    def __str__(self):
+        return f"Employee({self.name}, {self.department}, ₹{self.salary})"
+emp = Employee("Fidha", "IT", 500000)
+print(emp.get_info())
+print(emp)
